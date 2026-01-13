@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/champagne_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 120vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: space-between;
+  color: white;
+}
+
+header div {
+  font-size: 2rem;
+}
+
+header nav ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.card {
+  width: 600px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: solid 1px white;
+  padding-top: 1rem;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+}
+
+.card:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.03);
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.card h2 {
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.card img {
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+.page-wrapper {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 4rem;
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#champagne-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+#delete-btn {
+  padding: 0.3rem 0.6rem;
+  height: 2rem;
+  width: 20rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: solid 3px white;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#delete-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+}
+
+#delete-btn:active {
+  transform: scale(0.97);
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-between;
+}
+
+header div {
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style: none;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.social-img ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.social-img img {
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: auto;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  header div {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    padding-top: 1rem;
+  }
+
+  .card img {
+    height: 300px;
+  }
+
+  .page-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+  }
+
+  #delete-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  footer {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    gap: 1rem;
+  }
+
+  .social-img img {
+    height: 24px;
+    width: 24px;
+  }
+}

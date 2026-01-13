@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./assets/champagne_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 120vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+header div {
+  color: white;
+}
+
+header nav ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.card {
+  width: 400px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: solid 1px white;
+  padding-top: 1rem;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+}
+
+.card:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.03);
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.card h4 {
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.card img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+#champagne-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 3rem;
+  padding: 2rem 0;
+  justify-content: space-evenly;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: space-between;
+}
+
+header div {
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.social-img ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.social-img img {
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+  #champagne-wrapper {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  header div {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .social-img ul {
+    justify-content: center;
+  }
+}

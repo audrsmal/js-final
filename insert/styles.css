@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(../assets/champagne_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-wrapper {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  height: 700px;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: space-between;
+}
+
+header div {
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  border-radius: 3rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  color: white;
+}
+
+.insert-input {
+  width: 45rem;
+  height: 2rem;
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 0.3rem 0.6rem;
+  transition: 0.3s ease;
+}
+
+.insert-input:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+}
+
+.insert-input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.03);
+}
+
+.insert-input:active {
+  transform: scale(0.98);
+}
+
+input::placeholder {
+  color: white;
+}
+
+.form input {
+  padding: 0.3rem 0.6rem;
+}
+
+#submit-btn {
+  padding: 0.3rem 0.6rem;
+  height: 2rem;
+  width: 20rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: solid 3px white;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+}
+
+#submit-btn:active {
+  transform: scale(0.97);
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+#message {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-img ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.social-img img {
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: auto;
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    height: auto;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  header div {
+    font-size: 1.5rem;
+  }
+
+  .insert-input {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #submit-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  footer {
+    gap: 1rem;
+  }
+
+  .social-img img {
+    height: 24px;
+    width: 24px;
+  }
+}
