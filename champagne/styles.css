@@ -18,6 +18,26 @@ body {
   margin: 0 auto;
 }
 
+.page-wrapper {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 4rem;
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#champagne-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 header {
   height: 100px;
   display: flex;
@@ -79,30 +99,9 @@ header nav ul li a {
 }
 
 .card img {
-  width: 100%;
-  height: 600px;
-  object-fit: contain;
+  width: 400px;
+  height: 500px;
   background-color: transparent;
-}
-
-.page-wrapper {
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-bottom: 4rem;
-  gap: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#champagne-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding-top: 2rem;
-  margin-bottom: 1rem;
 }
 
 #delete-btn {

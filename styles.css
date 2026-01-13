@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+.section-wrapper {
+  max-width: 1600px;
+  margin: 0rem auto;
+  padding: 1rem;
+}
+
 body {
   background-image: url(./assets/champagne_background.jpg);
   background-size: cover;
@@ -13,19 +19,37 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.section-wrapper {
-  max-width: 1600px;
-  margin: 0 auto;
+header div {
+  color: white;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header div {
-  color: white;
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style: none;
 }
 
 header nav ul li a {
   list-style: none;
   text-decoration: none;
   color: white;
+}
+
+#champagne-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 3rem;
+  justify-content: space-between;
+  margin: 4rem 0rem;
 }
 
 .card {
@@ -70,35 +94,9 @@ header nav ul li a {
 }
 
 .card img {
-  width: 100%;
+  width: 350px;
   height: 400px;
-  object-fit: contain;
   background-color: transparent;
-}
-
-#champagne-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  gap: 3rem;
-  padding: 2rem 0;
-  justify-content: space-evenly;
-}
-
-header {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  justify-content: space-between;
-}
-
-header div {
-  font-size: 2rem;
-}
-
-header nav ul {
-  list-style: none;
 }
 
 footer {
@@ -123,7 +121,7 @@ footer {
   width: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   #champagne-wrapper {
     grid-template-columns: 1fr;
     justify-content: center;
