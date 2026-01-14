@@ -4,7 +4,7 @@ const deleteBtn = document.getElementById("delete-btn");
 const url = new URL(window.location.href);
 const id = url.searchParams.get("id");
 
-const buildScreen = async () => {
+const buildCard = async () => {
   const response = await fetch(
     `https://6960b2dee7aa517cb796d5c0.mockapi.io/champagnes/${id}`
   );
@@ -35,7 +35,7 @@ const buildScreen = async () => {
   champagneWrapper.append(card);
 };
 
-buildScreen();
+buildCard();
 
 const showDeleteMessage = () => {
   const msg = document.createElement("p");
