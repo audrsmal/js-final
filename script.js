@@ -1,38 +1,32 @@
+import { buildScreen } from "./utils/fetch.js";
+
 const champagneWrapper = document.getElementById("champagne-wrapper");
 
-const buildScreen = async () => {
-  const response = await fetch(
-    "https://6960b2dee7aa517cb796d5c0.mockapi.io/champagnes"
-  );
+const champagne = await buildScreen();
 
-  const champagne = await response.json();
+champagne.sort((a, b) => a.price - b.price);
 
-  champagne.sort((a, b) => a.price - b.price);
+champagne.forEach((c) => {
+  const card = document.createElement("a");
+  card.classList.add("card");
+  const link = `./champagne/index.html?id=${c.id}`;
+  card.href = link;
 
-  champagne.forEach((c) => {
-    const card = document.createElement("a");
-    card.classList.add("card");
-    const link = `./champagne/index.html?id=${c.id}`;
-    card.href = link;
+  const name = document.createElement("h4");
+  name.innerText = c.name;
 
-    const name = document.createElement("h4");
-    name.innerText = c.name;
+  const price = document.createElement("h4");
+  price.textContent = `Price: ${c.price} €`;
 
-    const price = document.createElement("h4");
-    price.textContent = `Price: ${c.price} €`;
+  const description = document.createElement("h4");
+  description.innerText = `Description: ${c.description}`;
 
-    const description = document.createElement("h4");
-    description.innerText = `Description: ${c.description}`;
+  const location = document.createElement("h5");
+  location.innerText = c.location;
 
-    const location = document.createElement("h5");
-    location.innerText = c.location;
+  const image = document.createElement("img");
+  image.src = c.img;
 
-    const image = document.createElement("img");
-    image.src = c.img;
-
-    card.append(name, price, description, location, image);
-    champagneWrapper.append(card);
-  });
-};
-
-buildScreen();
+  card.append(name, price, description, location, image);
+  champagneWrapper.append(card);
+});
