@@ -1,4 +1,4 @@
-export const buildScreen = async () => {
+export const getAllChampagnes = async () => {
   const response = await fetch(
     "https://6960b2dee7aa517cb796d5c0.mockapi.io/champagnes"
   );

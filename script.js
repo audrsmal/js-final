@@ -1,8 +1,8 @@
-import { buildScreen } from "./utils/fetch.js";
+import { getAllChampagnes } from "./utils/fetch.js";
 
 const champagneWrapper = document.getElementById("champagne-wrapper");
 
-const champagne = await buildScreen();
+const champagne = await getAllChampagnes();
 
 champagne.sort((a, b) => a.price - b.price);
 
